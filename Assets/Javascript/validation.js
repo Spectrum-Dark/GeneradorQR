@@ -46,7 +46,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Si todo es válido
         if (isValid) {
-            alert('Registration successful!');
+            alert('¡Registro exitoso! Redirigiendo a la página de login...');
+            // Redirigir después de 1 segundo (para que se vea el mensaje)
+            setTimeout(function() {
+                window.location.href = "login.html"; // Asegúrate que este archivo existe
+            }, 1000);
             registerForm.reset();
         }
     });
@@ -59,10 +63,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Enlace para login (simulado)
+    // Enlace para login
     loginLink.addEventListener('click', function(e) {
         e.preventDefault();
-        alert('Redirecting to login page...');
-        // Aquí iría la lógica para redirigir al login
+        window.location.href = "login.html"; // Misma redirección
     });
 });
