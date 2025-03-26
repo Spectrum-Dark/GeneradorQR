@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const registerForm = document.getElementById('registerForm');
     const loginLink = document.getElementById('loginLink');
+    const registerlink = document.getElementById('registerlink')
     const password = document.getElementById('password');
     const confirmPassword = document.getElementById('confirmPassword');
 
@@ -63,9 +64,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Enlace para login
+    // Enlace para iniciar sesion
     loginLink.addEventListener('click', function(e) {
         e.preventDefault();
-        window.location.href = "login.html"; // Misma redirección
+        window.location.href = "index.html"; // Misma redirección
     });
+
+    //Enlace para registrarse
+    registerlink.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.location.href = "register.html"; // Crear cuenta
+    })
 });

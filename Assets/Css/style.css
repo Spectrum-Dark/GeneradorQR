@@ -102,10 +102,6 @@ body {
     font-weight: 500;
 }
 
-.footer a:hover {
-    text-decoration: underline;
-}
-
 .error-message {
     color: #ff4a4a;
     font-size: 12px;
