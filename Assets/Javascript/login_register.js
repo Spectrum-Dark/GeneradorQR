@@ -76,7 +76,7 @@ function GetUserData_Sesion() {
       ObjDatos.UserPassword === UserEntity.Password?.UserPassword
     ) {
       /* Guardamos la sesion */
-      localStorage.setItem("sesion", ObjDatos.UserEmail);
+      localStorage.setItem("sesion", JSON.stringify(ObjDatos.UserEmail));
       /* Redirigimos a aplicacion principal */
       setTimeout(() => {
         window.location.href = "/Views/App.html";

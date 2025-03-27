@@ -4,14 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generador QR</title>
-    <script defer src="../Assets/Javascript/sesion.js"></script>
+    <title>Generador de QR</title>
+    <!-- Logo -->
+    <link rel="shortcut icon" href="../Assets/Icon/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../Assets/Css/app.css">
     <script defer src="../Assets/Javascript/app.js"></script>
+    <script defer src="../Assets/Javascript/Qrcode.min.js"></script>
+    <script defer src="../Assets/Javascript/render.js"></script>
+    <script defer src="../Assets/Javascript/sesion.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
 </head>
 
 <body>
-    <h1>Bienvenido</h1>
-    <button id="btnsesion">Cerrar sesion</button>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"></div>
+                <p class="title-app">GENERADOR DE CODIGOS</p>
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="ti ti-menu-2"></i></button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#"><i class="ti ti-home"></i> Inicio</a></li>
+                    <li><a href="#"><i class="ti ti-barcode"></i> Códigos de barras</a></li>
+                    <li><a href="#"><i class="ti ti-qrcode"></i> Códigos QR</a></li>
+                    <li><a href="#"><i class="ti ti-book-2"></i> Blog</a></li>
+                    <li><a href="#"><i class="ti ti-info-hexagon"></i> Ayuda</a></li>
+                    <li><a href="#"><i class="ti ti-language"></i> Idioma</a></li>
+                    <li><a href="#" id="btnsesion"><i class="ti ti-logout"></i> Cerrar Sesión</a></li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">
+            <a href="#">Home</a> > <a href="#">Generador de códigos QR</a>
+        </div>
+
+        <h1>Seleccione una opción</h1>
+
+        <div class="qr-generator">
+            <div class="qr-form">
+                <form action="" method="post" id="FormQR">
+                    <div class="form-group">
+                        <label for="qrType">Tipo de contenido:</label>
+                        <select id="qrType">
+                            <option value="text">Text</option>
+                            <option value="url">Url</option>
+                            <option value="email">Email</option>
+                            <option value="phone">Teléfono</option>
+                            <option value="sms">Sms</option>
+                            <option value="vcard">Contacto (vCard)</option>
+                            <option value="wifi">Wi-Fi</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="qrData">Datos del código QR:</label>
+                        <textarea id="qrData">https://www.onlinetoolcenter.com</textarea>
+                    </div>
+
+                    <button type="submit" class="btn" id="generateBtn">Generar QR</button>
+                    <button type="button" class="btn" id="downloadBtn">Descargar</button>
+            </div>
+            <div class="qr-preview">
+                <div id="ContainerQR"></div>
+                <h3>Código QR</h3>
+            </div>
+            </form>
+        </div>
+    </main>
 </body>
 
 </html>
