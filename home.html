@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de QR</title>
+    <!-- Logo -->
+    <link rel="shortcut icon" href="./Assets/Icon/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./Assets/Css/home.css">
+    <script defer src="/Assets/Javascript/home.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Generador QR</div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Generador de códigos de barras</a></li>
+                    <li><a href="#">Generador de códigos QR</a></li>
+                    <li><a href="#">Descargar</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="#">Idioma</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="breadcrumb">
+            <a href="#">Home</a> > <a href="#">Generador de códigos QR</a>
+        </div>
+        
+        <h1>Tipo de código QR</h1>
+        
+        <div class="qr-generator">
+            <div class="qr-form">
+                <div class="form-group">
+                    <label for="qrType">Tipo de contenido:</label>
+                    <select id="qrType">
+                        <option value="text">Text</option>
+                        <option value="url">URL</option>
+                        <option value="email">Email</option>
+                        <option value="phone">Teléfono</option>
+                        <option value="sms">SMS</option>
+                        <option value="vcard">Contacto (vCard)</option>
+                        <option value="wifi">Wi-Fi</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="qrData">Datos del código QR:</label>
+                    <textarea id="qrData">https://www.onlinetoolcenter.com</textarea>
+                </div>
+                
+                <button class="btn" id="generateBtn">Crear código de barras</button>
+                <button class="btn btn-secondary" id="refreshBtn">Refrescar</button>
+                <button class="btn" id="downloadBtn">Descargar</button>
+            </div>
+            
+            <div class="qr-preview">
+                <h2>Avance</h2>
+                <canvas id="qrCodeCanvas"></canvas>
+                <h3>Código QR</h3>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        
+    </script>
+</body>
+</html>
