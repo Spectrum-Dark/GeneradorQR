@@ -1,16 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     const registerForm = document.getElementById('registerForm');
-    const loginLink = document.getElementById('loginLink');
-    const registerlink = document.getElementById('registerlink')
     const password = document.getElementById('password');
     const confirmPassword = document.getElementById('confirmPassword');
 
-    // Validación del formulario
     registerForm.addEventListener('submit', function(e) {
-        e.preventDefault();
         let isValid = true;
 
-        // Validar nombre completo
         const fullName = document.getElementById('fullName');
         if (!fullName.value.trim()) {
             fullName.parentElement.classList.add('error');
@@ -19,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
             fullName.parentElement.classList.remove('error');
         }
 
-        // Validar email
         const email = document.getElementById('email');
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email.value)) {
@@ -29,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
             email.parentElement.classList.remove('error');
         }
 
-        // Validar contraseña
+        // Validación de la contraseña
         if (password.value.length < 8) {
             password.parentElement.classList.add('error');
             isValid = false;
@@ -37,42 +31,20 @@ document.addEventListener('DOMContentLoaded', function() {
             password.parentElement.classList.remove('error');
         }
 
-        // Validar confirmación de contraseña
+        // Validación de la confirmación de la contraseña
         if (password.value !== confirmPassword.value) {
             confirmPassword.parentElement.classList.add('error');
             isValid = false;
         } else {
             confirmPassword.parentElement.classList.remove('error');
         }
-
-        // Si todo es válido
-        if (isValid) {
-            alert('¡Registro exitoso! Redirigiendo a la página de login...');
-            // Redirigir después de 1 segundo (para que se vea el mensaje)
-            setTimeout(function() {
-                window.location.href = "login.html"; // Asegúrate que este archivo existe
-            }, 1000);
-            registerForm.reset();
-        }
     });
 
-    // Limpiar errores al escribir
+    // Limpiar los errores al escribir en los campos
     const inputs = document.querySelectorAll('input');
     inputs.forEach(input => {
         input.addEventListener('input', function() {
             this.parentElement.classList.remove('error');
         });
     });
-
-    // Enlace para iniciar sesion
-    loginLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.location.href = "index.html"; // Misma redirección
-    });
-
-    //Enlace para registrarse
-    registerlink.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.location.href = "register.html"; // Crear cuenta
-    })
 });

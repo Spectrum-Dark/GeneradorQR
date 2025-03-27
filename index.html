@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Login</title>
+    <title>Accede a tu cuenta</title>
+    <!-- Logo -->
+    <link rel="shortcut icon" href="./Assets/Icon/logo.png" type="image/x-icon">
+    <!-- Importante -->
     <link rel="stylesheet" href="./Assets/Css/login.css">
+    <script defer src="/Assets/Javascript/login_register.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+
 <body>
     <div class="login-container">
         <h1>INICIA SESION</h1>
-        <form class="login-form">
+        <form class="login-form" id="loginForm">
             <div class="form-group">
                 <label for="email">Correo Electrónico</label>
                 <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
@@ -25,4 +32,5 @@
         </form>
     </div>
 </body>
+
 </html>

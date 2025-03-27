@@ -5,9 +5,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Registrate</title>
+    <!-- Logo -->
+    <link rel="shortcut icon" href="./Assets/Icon/logo.png" type="image/x-icon">
+    <!-- Importante -->
     <link rel="stylesheet" href="./Assets/Css/style.css">
     <script defer src="./Assets/Javascript/validation.js"></script>
+    <script defer src="/Assets/Javascript/login_register.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -41,14 +46,11 @@
                 <input type="password" id="confirmPassword" placeholder="***********" required>
                 <div class="error-message">Las contraseñas no coinciden</div>
             </div>
-            <form id="registerForm" action="login.html" method="POST">
-                <!-- Tus campos de formulario actuales -->
-                <button type="submit" class="btn">GUARDAR DATOS</button>
-            </form>
+            <button type="submit" class="btn">GUARDAR DATOS</button>
         </form>
 
         <div class="footer">
-            <p>¿No tienes una cuenta? <a href="#" id="loginLink">Acceso</a></p>
+            <p>¿No tienes una cuenta? <a href="index.html" id="loginLink">Acceso</a></p>
         </div>
     </div>
 </body>
