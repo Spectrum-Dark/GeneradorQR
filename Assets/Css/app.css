@@ -246,15 +246,29 @@ canvas {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (max-width: 375px) {
+  #FormQR{
+    position: relative;
+    left: -20px;
+  }
+
+  h1{
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1300px) {
   .title-app {
       display: none;
   }
 }
 
-@media (min-width: 1199px) {
+@media (min-width: 1300px) {
   .title-app {
-      left: 240px;
+      left: 180px;
   }
 }
 

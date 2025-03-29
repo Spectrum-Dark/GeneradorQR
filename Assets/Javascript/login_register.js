@@ -79,7 +79,7 @@ function GetUserData_Sesion() {
       localStorage.setItem("sesion", JSON.stringify(ObjDatos.UserEmail));
       /* Redirigimos a aplicacion principal */
       setTimeout(() => {
-        window.location.href = "/Views/App.html";
+        window.location.href = "/Views/home.html";
       }, 1500);
     } else {
       Swal.fire({

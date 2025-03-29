@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de QR</title>
+    <!-- Logo -->
+    <link rel="shortcut icon" href="../Assets/Icon/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../Assets/Css/app.css">
+    <link rel="stylesheet" href="../Assets/Css/home.css">
+    <script defer src="../Assets/Javascript/home.js"></script>
+    <script defer src="../Assets/Javascript/sesion.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"></div>
+                <p class="title-app">GENERADOR DE CODIGOS</p>
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="ti ti-menu-2"></i></button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="./home.html" id="homeLink"><i class="ti ti-home"></i>Inicio</a></li>
+                    <li><a href="#"><i class="ti ti-barcode"></i> Códigos de barras</a></li>
+                    <li><a href="./App.html"><i class="ti ti-qrcode"></i> Códigos QR</a></li>
+                    <li><a href="#"><i class="ti ti-book-2"></i> Blog</a></li>
+                    <li><a href="#"><i class="ti ti-info-hexagon"></i> Ayuda</a></li>
+                    <li><a href="#"><i class="ti ti-language"></i> Idioma</a></li>
+                    <li><a href="#" id="btnsesion"><i class="ti ti-logout"></i> Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Inicioooo -->
+        <img class="homeappimg" src="../Assets/Icon/home-app.png" alt="home-app">
+        <!-- Modal de Bienvenida -->
+        <div class="modal" id="welcomeModal">
+            <div class="modal-content">
+                <h2>Bienvenido a nuestro generador de códigos QR</h2>
+                <p>¡Explora nuestras opciones y empieza a generar tus códigos!</p>
+                <button id="closeModal">Cerrar</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
