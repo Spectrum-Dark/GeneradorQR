@@ -1,0 +1,1 @@
+Se necesita hacer responsivo la pagina home.html
