@@ -14,6 +14,46 @@
     <script defer src="../Assets/Javascript/sesion.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .modal-content h2 {
+            margin: 0 0 10px;
+        }
+
+        .modal-content button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal-content button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,7 +64,7 @@
                 <p class="title-app">GENERADOR DE CODIGOS</p>
                 <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="ti ti-menu-2"></i></button>
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="#"><i class="ti ti-home"></i> Inicio</a></li>
+                    <li><a href="#" id=""><i class="ti ti-home"></i>Inicio</a></li>
                     <li><a href="#"><i class="ti ti-barcode"></i> Códigos de barras</a></li>
                     <li><a href="#"><i class="ti ti-qrcode"></i> Códigos QR</a></li>
                     <li><a href="#"><i class="ti ti-book-2"></i> Blog</a></li>
@@ -32,18 +72,16 @@
                     <li><a href="#"><i class="ti ti-language"></i> Idioma</a></li>
                     <li><a href="#" id="btnsesion"><i class="ti ti-logout"></i> Cerrar Sesión</a></li>
                 </ul>
-
             </nav>
         </div>
     </header>
 
     <main class="container">
         <div class="breadcrumb">
-            <a href="#">Home</a> > <a href="#">Generador de códigos QR</a>
+            <a href="#" id="homeLink">Home</a> > <a href="#">Generador de códigos QR</a>
         </div>
 
         <h1>Seleccione una opción</h1>
-
         <div class="qr-generator">
             <div class="qr-form">
                 <form action="" method="post" id="FormQR">
@@ -75,6 +113,39 @@
             </form>
         </div>
     </main>
+
+    <!-- Modal de Bienvenida -->
+    <div class="modal" id="welcomeModal">
+        <div class="modal-content">
+            <h2>Bienvenido a nuestro generador de códigos QR</h2>
+            <p>¡Explora nuestras opciones y empieza a generar tus códigos!</p>
+            <button id="closeModal">Cerrar</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const homeLink = document.getElementById('homeLink');
+            const welcomeModal = document.getElementById('welcomeModal');
+            const closeModal = document.getElementById('closeModal');
+
+            homeLink.addEventListener('click', (event) => {
+                event.preventDefault(); // Evita la acción por defecto del enlace
+                welcomeModal.style.display = 'flex';
+            });
+
+            closeModal.addEventListener('click', () => {
+                welcomeModal.style.display = 'none';
+            });
+
+            // Cierra el modal si se hace clic fuera del contenido
+            window.addEventListener('click', (event) => {
+                if (event.target === welcomeModal) {
+                    welcomeModal.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

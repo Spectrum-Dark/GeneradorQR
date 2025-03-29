@@ -71,6 +71,10 @@ nav {
   width: 100%;
   padding: 4px;
   display: block;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  -o-transition: color 0.3s;
 }
 
 .nav-links a:hover {
@@ -204,54 +208,56 @@ canvas {
 
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    background-color: #2c3e50;
-    padding: 1rem;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      background-color: #2c3e50;
+      padding: 1rem;
+      border-radius: 10px;
   }
 
   .nav-links a:hover {
-    color: #76D815;
-    font-size: 18px;
-    border-left: 2px solid #00b046;
+      color: #76D815;
+      font-size: 18px;
+      border-left: 2px solid #00b046;
   }
 
   .nav-links.active {
-    display: flex;
+      display: flex;
   }
 
   .nav-links li {
-    margin: 0.5rem 0;
+      margin: 0.5rem 0;
   }
 
   .mobile-menu-btn {
-    display: block;
+      display: block;
   }
 
   .qr-generator {
-    flex-direction: column;
+      flex-direction: column;
+  }
+
+  textarea {
+      min-height: 100px;
   }
 }
 
-/* Para pantallas entre 768px y 1199px */
 @media (min-width: 768px) and (max-width: 1199px) {
   .title-app {
-    display: none;
+      display: none;
   }
 }
 
-/* Para pantallas mayores a 1119px */
 @media (min-width: 1199px) {
   .title-app {
-    display: 240px;
+      left: 240px;
   }
 }
+
+
+
+
