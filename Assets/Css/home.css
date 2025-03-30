@@ -52,25 +52,12 @@
   max-width: 500px;
   margin: 20px auto;
   display: block;
+  z-index: -1;
 }
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
-  .nav-links {
-      display: none;
-      flex-direction: column;
-      gap: 10px;
-      background-color: #007bff;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      padding: 10px 0;
-  }
-
-  .nav-links.show {
-      display: flex;
-  }
+ 
 
   .mobile-menu-btn {
       display: block;

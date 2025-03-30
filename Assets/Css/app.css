@@ -272,6 +272,19 @@ canvas {
   }
 }
 
+@media (min-width: 320px){
+  .title-app{
+    left: 160px;
+  }
+}
+
+@media (min-width: 480px){
+  .title-app{
+    left: 180px;
+  }
+}
+
+
 
 
 
