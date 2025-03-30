@@ -17,6 +17,8 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
+  width: 90%;
+  max-width: 400px;
 }
 
 .modal-content h2 {
@@ -46,4 +48,45 @@
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #007bff;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 10px 0;
+  }
+
+  .nav-links.show {
+      display: flex;
+  }
+
+  .mobile-menu-btn {
+      display: block;
+  }
+
+  .title-app {
+      font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-app {
+      font-size: 1rem;
+  }
+
+  .nav-links a {
+      font-size: 0.9rem;
+  }
 }
